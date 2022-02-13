@@ -5,6 +5,7 @@ import "express-async-errors";
 import { router } from "./routes";
 
 import "./database";
+import { ValidationError } from "./errors/ValidationError";
 
 const app = express();
 
@@ -14,7 +15,7 @@ app.use(router);
 
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
-    if (err instanceof Error) {
+    if (err instanceof ValidationError) {
       return response.status(400).json({
         error: err.message,
       });

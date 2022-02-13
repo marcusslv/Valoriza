@@ -1,4 +1,5 @@
 import { getCustomRepository } from "typeorm";
+import { ValidationError } from "../errors/ValidationError";
 import { TagsRepositories } from "../repositories/TagsRepositories";
 
 class CreateTagService {
@@ -6,7 +7,7 @@ class CreateTagService {
     const tagsRepositories = getCustomRepository(TagsRepositories);
 
     if (!name) {
-      throw new Error("Incorrect name!");
+      throw new ValidationError("Incorrect name!");
     }
 
     const tagAlreadyExists = await tagsRepositories.findOne({
@@ -14,7 +15,7 @@ class CreateTagService {
     });
 
     if (tagAlreadyExists) {
-      throw new Error("Tag already exists!");
+      throw new ValidationError("Tag already exists!");
     }
 
     const tag = tagsRepositories.create({
