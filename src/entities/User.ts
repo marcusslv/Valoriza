@@ -22,6 +22,8 @@ class User {
   created_at: Date;
   @UpdateDateColumn()
   updated_at: Date;
+  @Column()
+  password: string;
 
   constructor() {
     if (!this.id) {
