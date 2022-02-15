@@ -1,6 +1,32 @@
-# NLW Valoriza
+# Valoriza
 
-## Regras
+## Tecnologias
+
+Esse projeto foi desenvolvido com as seguintes tecnologias:
+ 
+ - [NodeJs](https://nodejs.org/en/)
+ - [Typescript](https://www.typescriptlang.org/)
+ - [Expless](https://expressjs.com/pt-br/)
+ - [JWT](https://jwt.io/)
+ - [Typeorm](https://typeorm.io/#/)
+
+ ## Projeto
+ 
+Valoriza é uma plataforma para promover o reconhecimento entre companheiros de equipe.
+
+## Como executar
+
+- Clone o repositório
+- Rode `yarn` para baixar as dependências
+- Rode `yarn typeorm migration:run` para criar as tabelas do banco de dados.
+- Rode o `yarn run dev`
+
+Por fim, a aplicação estará disponível em `http://localhost:3000`
+
+## Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes
+## Regras de negócio
 
  - Cadastro de usuário 
  
