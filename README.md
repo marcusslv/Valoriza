@@ -28,7 +28,7 @@ Por fim, a aplicação estará disponível em `http://localhost:3000`
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para mais detalhes
 ## Regras de negócio
 
- - Cadastro de usuário 
+ - Cadastro de Usuário 
  
     [ x ] Não é permitido cadastrar mais de um usuário com mesmo e-mail
     
@@ -44,10 +44,24 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
     [ x ] Não é permitido o cadastro por usuários que não sejam administradores
 
 
-- Cadastro de elogios
+- Cadastro de Elogios
     
-    [ ] Não é permitido um usuário cadastrar um elogio para si
+    [ x ] Não é permitido um usuário cadastrar um elogio para si
 
-    [ ] Não é permitido cadastrar elogios para usuários inválidos
+    [ x ] Não é permitido cadastrar elogios para usuários inválidos
 
-    [ ] O usuário precisa estar autenticado na aplicação
+    [ x ] O usuário precisa estar autenticado na aplicação
+
+- Lista de Usuários
+ 
+    [ x ] O usuário precisa estar autenticado na aplicação
+
+    [ x ] O usuário precisa ser usuário administrador
+
+- Lista de TAGs
+
+    [ x ] O usuário precisa estar autenticado na aplicação
+
+- Lista de Elogios
+
+    [ x ] O usuário precisa estar autenticado na aplicação

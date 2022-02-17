@@ -2,7 +2,7 @@ import { getCustomRepository } from "typeorm";
 import { ValidationError } from "../errors/ValidationError";
 import { ComplimentsRepositories } from "../repositories/ComplimentsRepositories";
 import { TagsRepositories } from "../repositories/TagsRepositories";
-import { UserRepositories } from "../repositories/UsersRepositores";
+import { UsersRepositories } from "../repositories/UsersRepositores";
 
 interface IComplimentRequest {
   tag_id: string;
@@ -16,12 +16,12 @@ class CreateComplimentService {
     tag_id,
     user_sender,
     user_receiver,
-    message
+    message,
   }: IComplimentRequest) {
     const complimentsRepositories = getCustomRepository(
       ComplimentsRepositories
     );
-    const usersRepositories = getCustomRepository(UserRepositories);
+    const usersRepositories = getCustomRepository(UsersRepositories);
 
     if (user_sender === user_receiver) {
       throw new ValidationError("Incorrect User Receiver");

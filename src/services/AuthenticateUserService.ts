@@ -1,6 +1,6 @@
 import { getCustomRepository } from "typeorm";
 import { ValidationError } from "../errors/ValidationError";
-import { UserRepositories } from "../repositories/UsersRepositores";
+import { UsersRepositories } from "../repositories/UsersRepositores";
 import { compare } from "bcryptjs";
 import { sign } from "jsonwebtoken";
 
@@ -11,7 +11,7 @@ interface IAuthenticateRequest {
 
 class AuthenticateUserService {
   async execute({ email, password }: IAuthenticateRequest) {
-    const userRepositories = getCustomRepository(UserRepositories);
+    const userRepositories = getCustomRepository(UsersRepositories);
 
     const user = await userRepositories.findOne({
       email,

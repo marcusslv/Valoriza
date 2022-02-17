@@ -1,6 +1,6 @@
 import { getCustomRepository } from "typeorm";
 import { ValidationError } from "../errors/ValidationError";
-import { UserRepositories } from "../repositories/UsersRepositores";
+import { UsersRepositories } from "../repositories/UsersRepositores";
 import { hash } from "bcryptjs";
 
 interface IUserRequest {
@@ -12,7 +12,7 @@ interface IUserRequest {
 
 class CreateUserService {
   async execute({ name, email, admin = false, password }: IUserRequest) {
-    const usersRepository = getCustomRepository(UserRepositories);
+    const usersRepository = getCustomRepository(UsersRepositories);
 
     if (!email) {
       throw new ValidationError("Email incorrect");
