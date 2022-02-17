@@ -6,7 +6,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
  
  - [NodeJs](https://nodejs.org/en/)
  - [Typescript](https://www.typescriptlang.org/)
- - [Expless](https://expressjs.com/pt-br/)
+ - [Express](https://expressjs.com/pt-br/)
  - [JWT](https://jwt.io/)
  - [Typeorm](https://typeorm.io/#/)
 
