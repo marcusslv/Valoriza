@@ -66,3 +66,9 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 - Lista de Elogios
 
     [ x ] O usuário precisa estar autenticado na aplicação
+
+- Notifica os Usuários
+
+    [  ] O usuário precisa estar autenticado na aplicação
+
+    [  ] Notificar o usuário que receber um elogio
